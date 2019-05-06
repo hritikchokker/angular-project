@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-user-signup',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSignupComponent implements OnInit {
 
-  constructor() { }
+  registerForm = this.fb.group({
+    fullname: [''],
+    lastname: [''],
+    username: ['', Validators.required],
+    password: ['', Validators.required]
+
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
-
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.log(this.registerForm.value);
+  }
 }
