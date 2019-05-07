@@ -1,10 +1,22 @@
 <div class="container-fluid text-center bg-secondary vh-auto">
   <h2 class="display-3  pt-4">Do You Think You Know Everything About Your Favourite Comic Character ? </h2>
 
-  <h4 class="display-4 alert-primary rounded-pill mt-5">We bet You Don't Know everything ! </h4>
+  <h4 class="display-4 alert-info rounded-pill mt-5">We bet You Don't Know everything ! </h4>
+
   <div class="form-group mt-5 d-flex justify-content-center ">
-    <input class="form-control text-center mt-5 w-50 " type="text"
-      placeholder="Refresh Your Knowledge">
+    <input class="form-control text-center mt-5 w-50 "  type="text"
+      [formControl]="name"  placeholder="Refresh Your Knowledge">
   </div>
-  <button type="submit" class="btn mb-5 mt-5 rounded-pill w-25 btn-info">Search</button>
+  <h4> {{ name.value }} </h4>
+  <button (click)="getchar(name.value)" type="submit" class="btn mb-5 mt-5 rounded-pill w-25 btn-info">Search</button>
+
 </div>
+ <!-- <h5>is it </h5>
+     <ul class="list-group" >
+       <li *ngFor="let value of results" >
+         <img src="{{value.image.url}}" alt="{{ value.name }}" srcset="">
+         <h4 class="display-4"> {{value.name}} </h4>
+       </li>
+     </ul>
+  </div>-->
+
