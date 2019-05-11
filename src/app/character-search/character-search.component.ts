@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { FormControl, FormsModule, Validators } from '@angular/forms';
-import { HttpClient,HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { JsonModel } from '../jsonmodel';

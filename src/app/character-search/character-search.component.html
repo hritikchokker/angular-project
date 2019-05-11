@@ -9,14 +9,55 @@
   </div>
   <h4> {{ name.value }} </h4>
   <button (click)="getchar(name.value)" type="submit" class="btn mb-5 mt-5 rounded-pill w-25 btn-info">Search</button>
+  </div>
 
-</div>
- <!-- <h5>is it </h5>
-     <ul class="list-group" >
-       <li *ngFor="let value of results" >
-         <img src="{{value.image.url}}" alt="{{ value.name }}" srcset="">
-         <h4 class="display-4"> {{value.name}} </h4>
-       </li>
-     </ul>
-  </div>-->
+  <div class="container card" *ngIf="results">
+    <div class="row card-body text-center" *ngFor="let value of results">
+    <div class="row card-body " >
+      <div class="col">
+        <img src="{{value.image.url}} " alt="{{value.name}}" class="img-responsive card-img">
+        <h5 class="card-title text-center">{{value.name}}</h5>
+      </div>
+      <div class="col ">
+        <ul class="list-group  text-center"><span class=" text-primary">PowerStats</span>
+          <li class="list-group-item"><h5 class="card-title">Intelligence: {{ value.powerstats.intelligence}}</h5></li>
+           <li class="list-group-item"> <h5 class="card-title">Strength: {{ value.powerstats.strength}}</h5></li>
+            <li class="list-group-item"><h5 class="card-title">Speed: {{ value.powerstats.speed}}</h5></li>
+            <li class="list-group-item"><h5 class="card-title">Durability: {{ value.powerstats.durability}}</h5></li>
+           <li class="list-group-item"> <h5 class="card-title">Power: {{ value.powerstats.power}}</h5></li>
+            <li class="list-group-item"><h5 class="card-title">Combat: {{ value.powerstats.combat}}</h5></li>
+        </ul>
+      </div>
+      <div class="col ">
+        <ul class="list-group card-body text-center"><span class=" text-primary">Appearance</span>
+          <li class="list-group-item"><h5 class="card-title">Gender: {{value.appearance.gender}}</h5></li>
+          <li class="list-group-item"><h5 class="card-title">Race: {{value.appearance.race}}</h5></li>
+          <li class="list-group-item"><h5 class="card-title">Height: {{value.appearance.height}}</h5></li>
+          <li class="list-group-item"><h5 class="card-title">Weight: {{value.appearance.weight}}</h5></li>
+          <li class="list-group-item"><h5 class="card-title">Publisher: {{value.biography.publisher}}</h5></li>
+           <li class="list-group-item"><h5 class="card-title">Base: {{value.work.base}}</h5></li>
+            <li class="list-group-item"><h5 class="card-title">Occupation: {{value.work.occupation}}</h5></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row card ">
+      <div class="col">
+        <h5 class="display-4 justify-content-center"><span class=" text-primary">aliases:</span> {{value.biography.aliases}}</h5>
+      </div>
+      <hr>
+      <div class="col ">
+        <h5 class="display-4"><span class="text-primary">Connections:</span> {{value.connections.relatives}} </h5>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- <app-character-search-result [resultcomp]="results" ></app-character-search-result> -->
+<!-- <h5>is it </h5>
+<ul class="list-group">
+  <li *ngFor="let value of results">
+    <img src="{{value.image.url}}" alt="{{ value.name }}" srcset="">
+    <h4 class="display-4"> {{value.name}} </h4>
+  </li>
+</ul> -->
 
