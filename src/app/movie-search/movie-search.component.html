@@ -1,17 +1,42 @@
-<div class="container-fluid vh-100 bg-info ">
+<div class="container-fluid  bg-info ">
 <h2 class="display-4 text-center pt-5">We provide streaming of more than 5000 movies</h2>
+<!-- <h2> {{ inputname.value }} </h2>
+<h2> {{ inputyear.value }} </h2>
+<h2> {{ url }} </h2> -->
 <hr>
-<div class="row mt-5">
-  <div class="col col-md-6 col-lg-6 col-xs-12 col-sm-12 form-group">
+<div #movie class="row mt-5">
+  <div  class="col col-md-6 col-lg-6 col-xs-12 col-sm-12 form-group">
     <label for="moviename text-warning">Movie Name</label>
-    <input type="text" class="form-control" name="" id="" placeholder="search here">
+    <input type="text"#inputname  onfocus="this.value=''" class="form-control text-center rounded-top"  name="" id="" placeholder="search here">
   </div>
   <div class="col col-md-6 mb-4 col-lg-6 col-xs-12 col-sm-12 form-group">
     <label for="movieyear text-warning">Movie Year</label>
-    <input type="number" class="form-control" name="" id="movieyear" placeholder="movieyear">
+    <input type="number" #inputyear onfocus="this.value=''"  class="form-control text-center rounded-top"  name="" id="movieyear" placeholder="movieyear">
   </div>
 </div>
-<h4 class="display-5 mt-5 text-center">We even Provide Tv Shows streaming service, want to see ?</h4>
-<input type="checkbox" class="form-control" name="" id="">
-<button type="submit" class="btn text-center w-25 btn-outline-warning">Start Streaming</button>
+  <div class="container-fluid text-center">
+<h4 class="display-5 mt-5 text-center">Our service is free for everyone *No hidden charges</h4>
+<!-- <input #mycheck type="checkbox" [(ngModel)]="isChecked" (change)=" checkValue(isChecked ?'movie':tv) " class="form-control" name="" id=""> -->
+<button type="submit" (click)="myclick(inputname.value, inputyear.value)" class="btn mt-5 text-center rounded-pill w-25 mb-5 btn-outline-warning">Start Streaming</button>
+ <div class="container-fluid mb-5 embed-responsive embed-responsive-16by9 bg-info">
+  <iframe [src]="url | safe"
+     height="700px" width="700px" class="embed-responsive-item" allowscriptaccess="always" allowfullscreen="true"
+     scrolling="no"
+     frameborder="0"></iframe>
+     </div>
+ </div>
+ <!-- <div #tv class="container">
+   <h2>is it visible</h2>
+ </div> -->
 </div>
+<!--
+<video class="vjs-tech" id="olvideo_html5_api" crossorigin="anonymous"
+  poster="https://thumb.oloadcdn.net/splash/plmoRFysxP0/ZXLNMbQ249A.jpg"
+  src="/stream/plmoRFysxP0~1557748826~103.87.0.0~LkD2kM6p?mime=true">
+
+
+embed-responsive embed-responsive-16by9
+</video> -->
+<!--
+<object data="{{url}}"></object> -->
+
