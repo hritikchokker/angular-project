@@ -1,0 +1,36 @@
+<div class="container-fluid vh-100 text-center bg-secondary">
+  <h1 class="display-2">We even Provide Tv shows streaming service </h1>
+  <hr>
+  <!-- <h2> {{ showname.value }} </h2>
+  <h2> {{ showseason.value }} </h2>
+  <h2> {{ showepisode.value }} </h2>
+  <h2> {{ url }} </h2> -->
+  <h3 class="display-4"> we have more than 2000 tv show and web series.. </h3>
+  <div class="row text-center mt-4 form-group">
+    <div class="col col-md-4 col-lg-4 col-xs-4">
+      <label for="showname">Name</label>
+      <input type="text" #showname onfocus="this.value=''" class="form-control text-center rounded-top" name=""
+        id="showname" placeholder="tv show name">
+    </div>
+    <div class="col col-md-4 col-lg-4 col-xs-4">
+      <label for="showseason">Season</label>
+      <input type="number" #showseason onfocus="this.value=''" class="form-control text-center rounded-top" name=""
+        id="showname" placeholder="Season Number">
+    </div>
+    <div class="col col-md-4 col-lg-4 col-xs-4">
+      <label for="showepisode">Episode</label>
+      <input type="number" #showepisode onfocus="this.value=''" class="form-control text-center rounded-top" name=""
+        id="showepisode" placeholder="Episode Number">
+    </div>
+    <div class="container">
+    <button type="submit" (click)="clickShow(showname.value, showseason.value, showepisode.value)"
+         class="btn mt-5 text-center rounded-pill w-25 mb-5 btn-outline-warning">Start Streaming</button>
+    </div>
+  </div>
+  <div class="container-fluid mt-5">
+  <div *ngIf="url" class="container-fluid mb-5 mt-5 embed-responsive embed-responsive-16by9 bg-secondary">
+    <iframe [src]="url | safe" height="700px" width="700px" class="embed-responsive-item mb-5"
+      allowscriptaccess="always" allowfullscreen="true" scrolling="no" frameborder="0"></iframe>
+  </div>
+  </div>
+</div>

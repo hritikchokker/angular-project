@@ -1,16 +1,16 @@
-<div class="container-fluid  bg-info ">
+<div class="container-fluid vh-auto bg-info ">
 <h2 class="display-4 text-center pt-5">We provide streaming of more than 5000 movies</h2>
 <!-- <h2> {{ inputname.value }} </h2>
 <h2> {{ inputyear.value }} </h2>
 <h2> {{ url }} </h2> -->
 <hr>
-<div #movie class="row mt-5">
+<div  class="row mt-5">
   <div  class="col col-md-6 col-lg-6 col-xs-12 col-sm-12 form-group">
-    <label for="moviename text-warning">Movie Name</label>
+    <label for="moviename">Movie Name</label>
     <input type="text"#inputname  onfocus="this.value=''" class="form-control text-center rounded-top"  name="" id="" placeholder="search here">
   </div>
   <div class="col col-md-6 mb-4 col-lg-6 col-xs-12 col-sm-12 form-group">
-    <label for="movieyear text-warning">Movie Year</label>
+    <label for="movieyear">Movie Year</label>
     <input type="number" #inputyear onfocus="this.value=''"  class="form-control text-center rounded-top"  name="" id="movieyear" placeholder="movieyear">
   </div>
 </div>
@@ -20,7 +20,7 @@
 <button type="submit" (click)="myclick(inputname.value, inputyear.value)" class="btn mt-5 text-center rounded-pill w-25 mb-5 btn-outline-warning">Start Streaming</button>
  <div class="container-fluid mb-5 embed-responsive embed-responsive-16by9 bg-info">
   <iframe [src]="url | safe"
-     height="700px" width="700px" class="embed-responsive-item" allowscriptaccess="always" allowfullscreen="true"
+     height="700px" width="700px" class="embed-responsive-item mb-5" allowscriptaccess="always" allowfullscreen="true"
      scrolling="no"
      frameborder="0"></iframe>
      </div>

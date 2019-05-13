@@ -11,7 +11,8 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
+import { TvshowSearchComponent } from './tvshow-search/tvshow-search.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { HttpClientModule } from "@angular/common/http";
     UserLoginComponent,
     UserSignupComponent,
     DashboardComponent,
+    TvshowSearchComponent,
   ],
   imports: [
     ReactiveFormsModule,
