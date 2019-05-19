@@ -9,9 +9,10 @@ import { JsonModel } from './jsonmodel';
 export class MyserviceService {
 
   constructor(private http: HttpClient) { }
-  url = 'https://www.superheroapi.com/api.php/435853113652040/search';
+  // url = 'https://www.superheroapi.com/api.php/435853113652040/search';
+  url = 'http://103.87.58.128:1234/findhero/?name=';
 
   getcharacter(name): Observable<JsonModel[]> {
-    return this.http.get<JsonModel[]>(this.url + '/' + name);
+    return this.http.get<JsonModel[]>(this.url + name);
   }
 }
