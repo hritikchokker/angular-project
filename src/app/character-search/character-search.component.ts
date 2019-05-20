@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { JsonModel } from '../jsonmodel';
 import { MyserviceService } from '../myservice.service';
 
+
 @Component({
   selector: 'app-character-search',
   templateUrl: './character-search.component.html',
@@ -23,10 +24,11 @@ export class CharacterSearchComponent implements OnInit {
     getchar(name: string){
     this._myservice.getcharacter(name)
     .subscribe((data) => {
+      // console.log(this.data);
         this.jsonmodel = data as object [];
         console.log(this.jsonmodel);
-        this.results = data["results"];
-        console.log(this.results);
+        // this.results = data["results"];
+        // console.log(this.results);
     });
     }
 
