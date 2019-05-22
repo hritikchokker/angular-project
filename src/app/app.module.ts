@@ -13,7 +13,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TvshowSearchComponent } from './tvshow-search/tvshow-search.component';
-
+import { ChatAppComponent } from './chat-app/chat-app.component';
+import { ChatService } from './chat.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TvshowSearchComponent } from './tvshow-search/tvshow-search.component';
     UserSignupComponent,
     DashboardComponent,
     TvshowSearchComponent,
+    ChatAppComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -34,7 +36,7 @@ import { TvshowSearchComponent } from './tvshow-search/tvshow-search.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
