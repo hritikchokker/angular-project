@@ -10,11 +10,10 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TvshowSearchComponent } from './tvshow-search/tvshow-search.component';
 import { ChatAppComponent } from './chat-app/chat-app.component';
-import { ChatService } from './chat.service';
 
 @NgModule({
   declarations: [
@@ -32,11 +31,12 @@ import { ChatService } from './chat.service';
   ],
   imports: [
     ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ChatService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,7 +16,8 @@ export class CharacterSearchComponent implements OnInit {
   name = new FormControl('');
   jsonmodel: object[];
   results: object[];
-  result: string[];
+  message: string;
+  // result: string[];
 
   constructor(private _myservice: MyserviceService) { }
   ngOnInit() {
@@ -26,9 +27,14 @@ export class CharacterSearchComponent implements OnInit {
     .subscribe((data) => {
       // console.log(this.data);
         this.jsonmodel = data as object [];
-        console.log(this.jsonmodel);
-        // this.results = data["results"];
-        // console.log(this.results);
+        console.log('hritik', this.jsonmodel);
+        if(this.message === 'no hero found'){
+          alert('no hero found');
+        } else{
+          this.results = data["record"];
+          console.log(this.results);
+        }
+
     });
     }
 

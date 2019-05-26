@@ -8,7 +8,7 @@ import { ChatService } from '../chat.service';
 })
 export class ChatAppComponent implements OnInit {
   message: string;
-  messages: string[];
+  messages: string[] = [];
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
@@ -18,7 +18,7 @@ export class ChatAppComponent implements OnInit {
         this.messages.push(message);
       });
   }
-  sendMessage() {
+  sendMessage(message) {
     this.chatService.sendMessage(this.message);
     this.message = '';
   }

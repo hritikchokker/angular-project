@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChatService {
-  private url = 'http://localhost:3000';
-  private socket;
+   private url = 'http://localhost:3000';
+   private socket;
   constructor() {
     this.socket = io(this.url);
    }
