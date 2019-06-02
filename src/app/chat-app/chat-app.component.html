@@ -1,8 +1,5 @@
-<div *ngFor="let message of messages">
-  <h4>
-  {{message}}
-  </h4>
-</div>
-<br>
-<input [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()"   />
-<button (click)="sendMessage()">Send</button>
+<h1>
+  Angular 2 WebSockets Tutorial
+</h1>
+
+<button (click)="sendMsg()">Send Message</button>

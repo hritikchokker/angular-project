@@ -28,13 +28,8 @@ export class CharacterSearchComponent implements OnInit {
       // console.log(this.data);
         this.jsonmodel = data as object [];
         console.log('hritik', this.jsonmodel);
-        if(this.message === 'no hero found'){
-          alert('no hero found');
-        } else{
           this.results = data["record"];
           console.log(this.results);
-        }
-
     });
     }
 
