@@ -17,16 +17,16 @@ export class SafePipe implements PipeTransform {
   styleUrls: ['./tvshow-search.component.css']
 })
 export class TvshowSearchComponent implements OnInit {
-  name = '';
+  imdb = '';
   season: number;
   episode: number;
   url = '';
 
-  clickShow(name: string ,season: number, episode: number){
-    this.name = name;
+  clickShow(imdb: string ,season: number, episode: number){
+    this.imdb = imdb;
     this.season = season;
     this.episode = episode;
-    this.url = `https://api.odb.to/embed?title=${name}&s=${season}&e=${episode}`;
+    this.url = `https://videospider.stream/personal?key=NaEz1tk4YsAcYvbX&video_id=${imdb}&tv=2&s=${season}&e=${episode}`;
     console.log(name, season, episode);
     console.log(this.url);
   }

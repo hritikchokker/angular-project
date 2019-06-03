@@ -18,14 +18,12 @@ export class SafePipe implements PipeTransform {
 })
 export class MovieSearchComponent implements OnInit {
 
-  name = '';
+  imdb = '';
   url = '';
-  year ;
-  myclick(name: string, year: number){
-    this.name = name;
-    this.year = year;
-    this.url = `https://api.odb.to/embed?title=${name}&year=${year}`;
-    console.log(name, year);
+  myclick(imdb: string){
+    this.imdb = imdb;
+    this.url = `http://vplus.ucoz.com/${imdb}`;
+    console.log(imdb);
     console.log(this.url);
   }
 
