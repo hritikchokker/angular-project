@@ -2,5 +2,7 @@
   {{message.date| date: 'M/d/yy'}} {{message.date| date: 'h:mm:ss'}}: {{message.text}}
 </div>
 
-<input #chatInput (keyup.enter)="sendMessage()" [(ngModel)]="message" />
-<button (click)="sendMessage()">Send</button>
+<div class="container mb-5 d-flex justify-content-end fixed-bottom">
+<input #chatInput (keyup.enter)="sendMessage()" class="form-control" [(ngModel)]="message" placeholder="Type Here To Send Message" />
+<button class="btn btn-primary d-inline" (click)="sendMessage()">Send</button>
+</div>

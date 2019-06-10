@@ -7,7 +7,7 @@
     <input class="form-control text-center mt-5 w-50 "  type="text"
       [formControl]="name"  placeholder="Refresh Your Knowledge">
   </div>
-  <h4> {{ name.value }} </h4>
+  <!-- <h4> {{ name.value }} </h4> -->
   <button (click)="getchar(name.value)" type="submit" class="btn mb-5 mt-5 rounded-pill w-25 btn-info">Search</button>
   </div>
 
@@ -42,11 +42,11 @@
     </div>
     <div class="row card ">
       <div class="col">
-        <h5 class="display-4 justify-content-center"><span class=" text-primary">aliases:</span> {{value.biography.aliases}}</h5>
+        <h4 class="justify-content-center"><span class=" text-primary">aliases:</span> {{value.biography.aliases}}</h4>
       </div>
       <hr>
       <div class="col ">
-        <h5 class="display-4"><span class="text-primary">Connections:</span> {{value.connections.relatives}} </h5>
+        <h5 class="justify-content-center"><span class="text-primary">Connections:</span> {{value.connections.relatives}} </h5>
       </div>
     </div>
     </div>
